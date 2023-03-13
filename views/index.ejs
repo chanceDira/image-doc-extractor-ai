@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Image/Doc Extract</title>
+  </head>
+  <body
+    class="bg-violet-500 flex flex-col justify-center items-center min-h-screen relative"
+  >
+    <div
+      class="absolute top-0 text-violet-600 bg-white w-full flex justify-center items-center text-4xl font-bold py-4"
+    >
+      Image/Doc Extract
+    </div>
+
+    <div>
+      <form
+        action="/extract"
+        method="post"
+        enctype="multipart/form-data"
+        class="text-violet-200 font-bold mt-8 mb-4 flex flex-row justify-between"
+      >
+        <div>
+          <label for="file">Upload image</label>
+          <input type="file" name="file" id="" accept="image/*" required />
+        </div>
+        <div>
+          <button
+            class="border-2 border-violet-300 py-2 px-6 rounded-md hover:text-violet-600 hover:bg-white"
+          >
+            Extract
+          </button>
+        </div>
+      </form>
+
+      <textarea cols="80" rows="20" class="outline-none rounded-md p-6">
+            <%=data%>
+        </textarea
+      >
+    </div>
+  </body>
+</html>
